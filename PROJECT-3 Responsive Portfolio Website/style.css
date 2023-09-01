@@ -1,0 +1,358 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #080808;
+    color: #fff;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/* Home page - navigation bar + home content */
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/home1.png);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.container{
+    padding:10px 14%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+   color: #fff;
+   text-decoration: none;
+   font-size: 18px;
+   position: relative;                  /* 11111111 a::after pos absolute and this pos relative */
+}
+
+nav ul li a::after{                     /* this sets red colour under the navbar elements */
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;                 /* this position needs to be absolute 1111111111 */
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 20px;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.header-text h1 span{
+    color: #ff004f;
+}
+
+.header-text p{
+    font-family: 'Courier New';
+    font-style: italic;
+    color: #b5eff1;
+}
+
+/* --------------------------------- ABOUT SECTION --------------------------------------- */
+
+#about{
+    padding: 80px 0;
+    color:#ffffff;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width:100% ;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+#para11{
+    margin-top: 100px;
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #d8adc3;
+}
+
+.about-col-2 h1{
+    font-size: 50px;
+}
+
+/* --------------------- EDUCATION ------------------------ */
+
+#about{
+    padding: 80px 0;
+    color:#ffffff;
+}
+
+.education-col-1{
+    flex-basis: 35%;
+}
+
+.education-col-1 img{
+    width:100% ;
+    border-radius: 15px;
+}
+
+.education-col-2{
+    flex-basis: 60%;
+}
+
+.ten{
+    margin-top: 45px;
+    font-size:medium;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #cff5e6;
+}
+
+.education-col-2 h1{
+    font-size: 50px;
+}
+
+.ten h2{
+    font-style: italic;
+}
+.ten span{
+    color: #cc252d;
+}
+
+/* --------------------------EXPERIENCE------------------------*/
+
+#experience{
+    padding:30px 0;
+    background-color: #d6d4d4;
+}
+
+.experience-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+
+}
+
+.experience-list div{
+    background: #ffffff;
+    padding: 30px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+}
+
+.experience-list div h2{
+    color: #e619a8;
+    font-weight: bolder;
+}
+
+.experience-list div p{
+    color: #0e3b75;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #038b57;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #e4a530;
+    transform: translateY(-3px) scale(1.05);
+}
+
+
+/* ---------------------------SKILLS-----------------------------*/
+
+.skill {
+    margin: 20px auto;
+    max-width: 300px;   
+   
+}
+
+.skill::before{
+    background-image: url('../images/back1.jpg');
+    background-size: cover;
+    background-position: center center;
+    content: "";
+    position:absolute;
+    height: 75%;
+    width: 100%;
+    z-index: -1;
+    left:0px;
+    top:2490px;
+    opacity: 0.7;
+}
+
+.skill-name {
+    font-weight: bold;
+    margin:18px;
+}
+
+.skill-bar {
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: #85d121;
+    transition: width 1s ease-in-out;
+}
+
+
+/*-----------------------------CONTACT--------------------------------*/
+
+#contact{
+    margin-top: 100px;
+}
+.contact-left{
+    flex-basis: 35%;
+    margin-left: 65px;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color:#ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    margin-top: 30px;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover{
+    color:#ff004f;
+    transform: translateY(-5px);
+}
+
+.btnn{
+    background-color: #4ce7c679;
+    display: inline-block;
+    text-decoration: none;
+    color: #e0e0e0;
+    border-radius: 6px;
+    padding: 12px;
+    margin-top:30px;
+    transition: transform 0.5s;
+}
+
+.btnn:hover{
+    background-color:#ff004f;
+    transform: translateY(-5px);
+}
+
+.contact-right form{
+    width: 80%;
+}
+
+form input, form textarea{
+    width: 80%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.btnn2{
+    background-color: #4ce7c679;
+    display: inline-block;
+    text-decoration: none;
+    padding:9px 65px;
+    margin:20px 0px 30px 200px;
+    border-radius: 9px;
+}
+
+.btnn2:hover{
+    background-color:#ff004f;
+    transform: translateY(-5px);
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+#msg{
+    color:#61b752;
+    margin-top: -40px;
+    display: block;
+}
+
+/*------------------------------Utility Classes------------------------*/
+
+#headhead{
+    font-size: 50px;
+}
+
